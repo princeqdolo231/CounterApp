@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counter App</title>
+        <style>
+            header {
+                display: flex;
+                background-color: lightblue;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            nav {
+                display: flex;
+                padding: 10px;
+            }
+
+            #mgs {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: xx-large;
+            }
+
+            #Cover {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+
+            h1 {
+                font-size: 90px;
+            }
+
+            button {
+                cursor: pointer;
+                font-size: 50px;
+                padding: 40px;
+                margin: 5px;
+               
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>CounterApp</h1>
+            <p id="mgs">By: Prince Q. Dolo</p>
+        </header>
+        <div id="Cover">
+            <h1 id="Counter">0</h1>
+            <section>
+                <button class="btn" onclick="subtractNumber()">-</button>
+                <button class="btn" onclick="addNumber()">+</button>
+            </section>
+        </div>
+        <script type="text/javascript">
+                function addNumber() {
+                    let add = document.getElementById("Counter");
+                    let number = add.innerText;
+                    add.innerText = parseInt(number) + 1;
+                }
+
+                function subtractNumber() {
+                    let subtract = document.getElementById("Counter");
+                    let number = subtract.innerText;
+                    
+                    if(number > 0) {
+                        subtract.innerText = number - 1;
+                    } else {
+                        subtract.innerText = 0
+                    }
+                }
+        </script>
+    </body>
+</html>
